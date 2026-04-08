@@ -5,13 +5,13 @@ A C# console application that serves as a basic cybersecurity awareness chatbot 
 
 ## Features
 
-- 🔊 **Voice Greeting** — Plays a WAV welcome message on startup (Windows only)
-- 🎨 **ASCII Art Logo** — Displays a cybersecurity-themed banner at launch
-- 💬 **Personalised Interaction** — Asks for the user's name and addresses them throughout
-- 🛡️ **Cybersecurity Responses** — Covers password safety, phishing, safe browsing, malware, 2FA, VPNs, social engineering, and data privacy
-- ✅ **Input Validation** — Handles empty inputs and unrecognised queries gracefully
-- 🎨 **Enhanced Console UI** — Coloured text, typing effects, dividers, section headers, and emoji icons
-- 📁 **Well-Structured Code** — Separated into classes and helpers; no monolithic Program.cs
+- **Voice Greeting** — Plays a WAV welcome message on startup (Windows only)
+- **ASCII Art Logo** — Displays a cybersecurity-themed banner at launch
+- **Personalised Interaction** — Asks for the user's name and addresses them throughout
+- **Cybersecurity Responses** — Covers password safety, phishing, safe browsing, malware, 2FA, VPNs, social engineering, and data privacy
+- **Input Validation** — Handles empty inputs and unrecognised queries gracefully
+- **Enhanced Console UI** — Coloured text, typing effects, dividers, section headers, and emoji icons
+- **Well-Structured Code** — Separated into classes and helpers; no monolithic Program.cs
 
 ## Project Structure
 
