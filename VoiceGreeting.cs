@@ -1,38 +1,17 @@
-namespace CybersecurityChatbot.Helpers
+using System;
+using System.Speech.Synthesis;
+
+namespace VoiceGreetingApp
 {
-    public static class VoiceGreeting
+    class VoiceGreeting
     {
-        public static void PlayGreeting()
+        static void Main(string[] args)
         {
-            string wavPath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "greeting.wav");
-
-            if (!OperatingSystem.IsWindows())
+            using (SpeechSynthesizer synth = new SpeechSynthesizer())
             {
-                DisplayHelper.Info("[Voice greeting available on Windows only. Skipping audio playback.]");
-                return;
+                synth.SetOutputToDefaultAudioDevice();
+                synth.Speak("Hello! Welcome to our application. We are glad to have you here.");
             }
-
-            if (!File.Exists(wavPath))
-            {
-                DisplayHelper.Info("[Voice greeting file not found. Place 'greeting.wav' in the output directory.]");
-                return;
-            }
-
-            try
-            {
-                PlayWavOnWindows(wavPath);
-            }
-            catch (Exception ex)
-            {
-                DisplayHelper.Info($"[Could not play voice greeting: {ex.Message}]");
-            }
-        }
-
-        [System.Runtime.Versioning.SupportedOSPlatform("windows")]
-        private static void PlayWavOnWindows(string wavPath)
-        {
-            using var player = new System.Media.SoundPlayer(wavPath);
-            player.PlaySync();
         }
     }
 }
