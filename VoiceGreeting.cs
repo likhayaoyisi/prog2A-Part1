@@ -32,7 +32,7 @@ namespace CybersecurityChatbot.Helpers
         private static void PlayWavOnWindows(string wavPath)
         {
             using var player = new System.Media.SoundPlayer(wavPath);
-            player.PlaySync(); // Play and wait for completion before continuing
+            player.PlaySync();
         }
     }
 }
